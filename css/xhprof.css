@@ -13,45 +13,52 @@
  *  limitations under the License.
  */
 
+body, table {
+  font-family: "Helvetica", sans-serif;
+  font-size: 15px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 0;
+  padding: 3px;
+  margin: 0;
+}
+
 td.sorted {
   color:#0000FF;
 }
 
 td.vbar, th.vbar {
   text-align: right;
-  border-left:
-  solid 1px #bdc7d8;
 }
 
 td.vbbar, th.vbar {
   text-align: right;
-  border-left:
-  solid 1px #bdc7d8;
   color:blue;
 }
 
 /* diff reports: display regressions in red */
 td.vrbar {
   text-align: right;
-  border-left:solid 1px #bdc7d8;
   color:red;
 }
 
 /* diff reports: display improvements in green */
 td.vgbar {
   text-align: right;
-  border-left: solid 1px #bdc7d8;
   color:green;
 }
 
 td.vwbar, th.vwbar {
   text-align: right;
-  border-left: solid 1px white;
 }
 
 td.vwlbar, th.vwlbar {
   text-align: left;
-  border-left: solid 1px white;
 }
 
 p.blue  {

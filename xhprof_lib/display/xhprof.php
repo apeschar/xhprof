@@ -724,7 +724,7 @@ function print_flat_data($url_params, $title, $flat_data, $sort, $run1, $run2, $
     $limit = $size;
     $display_link = "";
   } else {
-    $display_link = xhprof_render_link(" [ <b class=bubble>display all </b>]",
+    $display_link = xhprof_render_link(" [ <b class=bubble>display all</b> ]",
                                        "$base_path/?" .
                                        http_build_query(xhprof_array_set($url_params,
                                                                          'all', 1)));
@@ -732,8 +732,7 @@ function print_flat_data($url_params, $title, $flat_data, $sort, $run1, $run2, $
 
   print("<h3 align=center>$title $display_link</h3><br>");
 
-  print('<table border=1 cellpadding=2 cellspacing=1 width="90%" '
-        .'rules=rows bordercolor="#bdc7d8" align=center>');
+  print('<table width="90%" align=center>');
   print('<tr bgcolor="#bdc7d8" align=right>');
 
   foreach ($stats as $stat) {
@@ -807,8 +806,7 @@ function full_report($url_params, $symbol_tab, $sort, $run1, $run2) {
                                         'run', $run2));
 
     print("<h3><center>Overall Diff Summary</center></h3>");
-    print('<table border=1 cellpadding=2 cellspacing=1 width="30%" '
-          .'rules=rows bordercolor="#bdc7d8" align=center>' . "\n");
+    print('<table width="30%" align=center>' . "\n");
     print('<tr bgcolor="#bdc7d8" align=right>');
     print("<th></th>");
     print("<th $vwbar>" . xhprof_render_link("Run #$run1", $href1) . "</th>");
@@ -1073,8 +1071,7 @@ function symbol_report($url_params,
       . http_build_query(xhprof_array_set($base_url_params, 'run', $run2));
 
     print("<h3 align=center>$regr_impr summary for $rep_symbol<br><br></h3>");
-    print('<table border=1 cellpadding=2 cellspacing=1 width="30%" '
-          .'rules=rows bordercolor="#bdc7d8" align=center>' . "\n");
+    print('<table width="30%" align=center>' . "\n");
     print('<tr bgcolor="#bdc7d8" align=right>');
     print("<th align=left>$rep_symbol</th>");
     print("<th $vwbar><a href=" . $href1 . ">Run #$run1</a></th>");
@@ -1149,8 +1146,7 @@ function symbol_report($url_params,
 
   print("</center></h4><br>");
 
-  print('<table border=1 cellpadding=2 cellspacing=1 width="90%" '
-        .'rules=rows bordercolor="#bdc7d8" align=center>' . "\n");
+  print('<table width="90%" align=center>' . "\n");
   print('<tr bgcolor="#bdc7d8" align=right>');
 
   foreach ($pc_stats as $stat) {
