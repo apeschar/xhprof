@@ -1142,7 +1142,7 @@ function symbol_report($url_params,
   $callgraph_href = "$base_path/callgraph.php?"
     . http_build_query(xhprof_array_set($url_params, 'func', $rep_symbol));
 
-  print(" <a href='$callgraph_href'>[View Callgraph $diff_text]</a><br>");
+  print(" <a href='$callgraph_href'>[" . trim("View Callgraph $diff_text") . "]</a><br>");
 
   print("</center></h4><br>");
 
