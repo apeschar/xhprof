@@ -31,11 +31,7 @@
 //             Changhao Jiang
 //
 
-// by default assume that xhprof_html & xhprof_lib directories
-// are at the same level.
-$GLOBALS['XHPROF_LIB_ROOT'] = dirname(__FILE__) . '/../xhprof_lib';
-
-require_once $GLOBALS['XHPROF_LIB_ROOT'].'/display/xhprof.php';
+require_once __DIR__ . '/core.php';
 
 // param name, its type, and default value
 $params = array('run'        => array(XHPROF_STRING_PARAM, ''),
@@ -79,8 +75,6 @@ $vwlbar = ' class="vwlbar"';
 $vbbar = ' class="vbbar"';
 $vrbar = ' class="vrbar"';
 $vgbar = ' class="vgbar"';
-
-$xhprof_runs_impl = new XHProfRuns_Default();
 
 displayXHProfReport($xhprof_runs_impl, $params, $source, $run, $wts,
                     $symbol, $sort, $run1, $run2);

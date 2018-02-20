@@ -29,13 +29,7 @@
  * @author Changhao Jiang (cjiang@facebook.com)
  */
 
-// by default assume that xhprof_html & xhprof_lib directories
-// are at the same level.
-$GLOBALS['XHPROF_LIB_ROOT'] = dirname(__FILE__) . '/../xhprof_lib';
-
-require_once $GLOBALS['XHPROF_LIB_ROOT'].'/display/xhprof.php';
-
-ini_set('max_execution_time', 100);
+require_once __DIR__ . '/core.php';
 
 $params = array(// run id param
                 'run' => array(XHPROF_STRING_PARAM, ''),
@@ -77,8 +71,6 @@ if ($threshold < 0 || $threshold > 1) {
 if (!array_key_exists($type, $xhprof_legal_image_types)) {
   $type = $params['type'][1]; // default image type.
 }
-
-$xhprof_runs_impl = new XHProfRuns_Default();
 
 if (!empty($run)) {
   // single run call graph image generation
